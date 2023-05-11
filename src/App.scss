@@ -1,0 +1,12 @@
+@import "./styles/utils";
+
+.App {
+  &__main {
+    display: flex;
+    height: calc(100vh - #{$header-height});
+
+    @include onTablet {
+      height: calc(100vh - #{$header-tablet-height});
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../styles/utils";
+
+.ListItem {
+  position: relative;
+  display: block;
+  padding: 12px 16px;
+  cursor: pointer;
+
+  @include onTablet {
+    padding: 12px 52px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    right: 0;
+    height: 1px;
+    background-color: $light-gray-color;
+
+    @include onTablet {
+      left: 52px;
+    }
+  }
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 2px;
+    font-size: 14px;
+  }
+
+  &__details {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &__text {
+    color: $gray-text-color;
+    font-weight: 500;
+  }
+}

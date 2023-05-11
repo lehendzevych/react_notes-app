@@ -1,0 +1,145 @@
+@import "../../styles/utils";
+
+.SearchBox {
+  position: absolute;
+  height: 26px;
+  right: 0;
+  left: 0;
+
+  @include onSmartphone {
+    position: static;
+    height: 26px;
+  }
+
+  @include onTablet {
+    height: 32px;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    @include transition;
+
+    @include onSmartphone {
+      display: block;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 6px;
+    right: 16px;
+    width: 14px;
+    height: 14px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../svg/search.svg");
+    @include transition;
+
+    @include onSmartphone {
+      left: 42px;
+    }
+
+    @include onTablet {
+      top: 8px;
+      left: 76px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &__input {
+    padding: 0 14px 0 28px;
+    width: 46px;
+    height: 100%;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    color: inherit;
+    text-align: center;
+
+    background: rgb(242,242,243);
+    background: linear-gradient(0deg, rgba(242,242,243,1) 0%, rgba(253,252,253,1) 100%);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border: 1px solid #FDFCFD;
+    border-radius: 4px;
+    @include transition;
+
+    @include onSmartphone {
+      width: $search-smartphone-width;
+    }
+  
+    @include onTablet {
+      width: $search-tablet-width;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: rgb(232,232,232);
+      background: linear-gradient(0deg, rgba(232,232,232,1) 0%, rgba(254,254,254,1) 100%);
+    }
+
+    &:focus {
+      width: 100%;
+      box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+
+      @include onSmartphone {
+        width: $search-smartphone-width;
+      }
+
+      @include onTablet {
+        width: $search-tablet-width;
+      }
+    }
+
+    &:focus ~ .SearchBox__icon {
+      right: 90%;
+
+      @include onSmartphone {
+        right: unset;
+        left: 8px;
+      }
+    }
+
+    &::placeholder {
+      visibility: hidden;
+      color: $gray-text-color;
+
+      @include onSmartphone {
+        visibility: visible;
+      }
+    }
+
+    &:focus::placeholder {
+      visibility: visible;
+    }
+  }
+
+  &--hasValue {
+    .SearchBox__icon {
+      right: 90%;
+
+      @include onSmartphone {
+        left: 8px;
+      }
+    }
+
+    .SearchBox__input {
+      width: 100%;
+
+      @include onSmartphone {
+        width: $search-smartphone-width;
+      }
+
+      @include onTablet {
+        width: $search-tablet-width;
+      }
+    }
+  }
+}
