@@ -1,23 +1,27 @@
-import { useState } from 'react';
+import { useContext } from 'react';
 import classNames from 'classnames';
+import { NoteContext } from '../../context/NoteContext';
 
 import './SearchBox.scss';
 
 export const SearchBox = () => {
-  const [query, setQuery] = useState<string>('');
+  const { searchQuery, setSearchQuery } = useContext(NoteContext);
 
   return (
     <form
-      className={classNames('SearchBox', { 'SearchBox--hasValue': query })}
+      className={classNames(
+        'SearchBox',
+        { 'SearchBox--hasValue': searchQuery },
+      )}
     >
       <label className="SearchBox__label">
         <input
           type="text"
           name="search"
-          value={query}
+          value={searchQuery}
           placeholder="Search"
           className="SearchBox__input"
-          onChange={e => setQuery(e.target.value)}
+          onChange={e => setSearchQuery(e.target.value)}
         />
 
         <span className="SearchBox__icon" />

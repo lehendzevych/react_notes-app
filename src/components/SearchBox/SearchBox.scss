@@ -64,7 +64,6 @@
     color: inherit;
     text-align: center;
 
-    background: rgb(242,242,243);
     background: linear-gradient(0deg, rgba(242,242,243,1) 0%, rgba(253,252,253,1) 100%);
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
     border: 1px solid #FDFCFD;
@@ -81,7 +80,6 @@
     }
 
     &:hover {
-      background: rgb(232,232,232);
       background: linear-gradient(0deg, rgba(232,232,232,1) 0%, rgba(254,254,254,1) 100%);
     }
 
