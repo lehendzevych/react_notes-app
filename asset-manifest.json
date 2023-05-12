@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "./static/css/main.336b9492.css",
+    "main.js": "./static/js/main.14b8e32f.js",
+    "static/media/SFUIText-Bold.ttf": "./static/media/SFUIText-Bold.7ae65fe927ab841bb1b6.ttf",
+    "static/media/SFUIText-Semibold.ttf": "./static/media/SFUIText-Semibold.66fa041f01ded08a1ac7.ttf",
+    "static/media/SFUIText-Regular.ttf": "./static/media/SFUIText-Regular.44da36462f52dd1140b3.ttf",
+    "static/media/bg.png": "./static/media/bg.27b7b4e39d13d57aedb0.png",
+    "static/media/edit.svg": "./static/media/edit.1365f56783421ab222ce406fe6192022.svg",
+    "static/media/add.svg": "./static/media/add.a98efb5c0ba7566bd40cf1bb8d0cc16e.svg",
+    "static/media/trash.svg": "./static/media/trash.164a19edb9ec8f823aea87e2a878474d.svg",
+    "static/media/done.svg": "./static/media/done.fa5226dac8dcc57c3bcf178b1934fa76.svg",
+    "static/media/search.svg": "./static/media/search.53382ef1ed7c446dc902.svg",
+    "index.html": "./index.html",
+    "main.336b9492.css.map": "./static/css/main.336b9492.css.map",
+    "main.14b8e32f.js.map": "./static/js/main.14b8e32f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.336b9492.css",
+    "static/js/main.14b8e32f.js"
+  ]
+}
