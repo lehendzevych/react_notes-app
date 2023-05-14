@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { FC, useContext } from 'react';
-import { NoteContext } from '../../context/NoteContext';
+import { NoteContext } from '../NoteContext';
 import { Note } from '../../types/Note';
 import './ListItem.scss';
 

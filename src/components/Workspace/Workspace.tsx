@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { NoteContext } from '../../context/NoteContext';
+import { NoteContext } from '../NoteContext';
 import { ViewNote } from '../ViewNote';
 
 import './Workspace.scss';

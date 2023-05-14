@@ -1,5 +1,6 @@
 import { useContext } from 'react';
-import { NoteContext } from '../../context/NoteContext';
+import { NoteContext } from '../NoteContext';
+import { Note } from '../../types/Note';
 import { ListItem } from '../ListItem';
 
 import './Sidebar.scss';
@@ -7,12 +8,15 @@ import './Sidebar.scss';
 export const Sidebar = () => {
   const { notes, searchQuery } = useContext(NoteContext);
 
-  const visibleNotes = notes.filter(note => {
+  const filterByQuery = ((note: Note) => {
     const title = note.title.toLocaleLowerCase();
+    const text = note.text.toLocaleLowerCase();
     const query = searchQuery.toLocaleLowerCase();
 
-    return title.includes(query);
+    return title.includes(query) || text.includes(query);
   });
+
+  const visibleNotes = notes.filter(filterByQuery).reverse();
 
   return (
     <aside className="Sidebar">

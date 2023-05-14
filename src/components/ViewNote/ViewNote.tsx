@@ -2,7 +2,7 @@ import {
   FC, useContext, useState, useEffect, useRef,
 } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { NoteContext } from '../../context/NoteContext';
+import { NoteContext } from '../NoteContext';
 import { Note } from '../../types/Note';
 
 import './ViewNote.scss';
