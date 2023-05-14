@@ -1,4 +1,4 @@
-# react_notes-app
+# React Notes app
 
 ## Description
 Simple react notes app on indexedDB.
