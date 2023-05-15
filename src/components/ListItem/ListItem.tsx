@@ -11,11 +11,15 @@ type Props = {
 export const ListItem: FC<Props> = ({ item }) => {
   const { title, text } = item;
   const {
-    selectedNote, setSelectedNote, setIsEditable,
+    selectedNote, searchQuery, setSelectedNote, setSearchQuery, setIsEditable,
   } = useContext(NoteContext);
 
   const handleSelectNote = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
+
+    if (searchQuery) {
+      setSearchQuery('');
+    }
 
     if (item.id !== selectedNote?.id) {
       setIsEditable(false);
